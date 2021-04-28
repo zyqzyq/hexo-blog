@@ -134,7 +134,7 @@ comment:
     avatar: mm # gravatar style
     meta: nick,mail,link # custom comment header
     pageSize: 10 # pagination size
-    visitor: true # Article reading statistic https://valine.js.org/visitor.html
+    visitor: false # Article reading statistic https://valine.js.org/visitor.html
 
 # douban 豆瓣书单
 # Api：
@@ -155,11 +155,11 @@ douban:
 # PV
 pv:
   busuanzi:
-    enable: false  # 不蒜子统计
+    enable: true  # 不蒜子统计
   leancloud:
-    enable: true  # leancloud统计
-    app_id: ss5B1VHAeeSwqnQmi8h7E6ip-gzGzoHsz # leancloud <AppID>
-    app_key: ljnA88bOYWBjm8WLlcao8Gcc # leancloud <AppKey>
+    enable: false  # leancloud统计
+    app_id:  # leancloud <AppID>
+    app_key:  # leancloud <AppKey>
         
 # wordcount
 postCount:
