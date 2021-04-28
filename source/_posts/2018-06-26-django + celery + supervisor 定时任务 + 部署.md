@@ -3,6 +3,7 @@ author: zyqzyq
 date: 2018-06-26 16:16:32+00:00
 layout: post
 title: django + celery + supervisor 定时任务 + 部署
+categories: django
 key: 20180626
 tags:
 - django

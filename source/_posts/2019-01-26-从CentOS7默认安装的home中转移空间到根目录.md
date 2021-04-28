@@ -3,6 +3,7 @@ author: zyqzyq
 date: 2019-01-26 10:16:32+00:00
 layout: post
 title: 从CentOS7默认安装的/home中转移空间到根目录/
+categories: Centos
 key: 20190126
 tags:
 - centos

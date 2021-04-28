@@ -1,7 +1,8 @@
 ---
 layout: post
 title: "Centos 安装twisted"
-date: 2017-06-05 16:25:06 -0700
+date: 2017-06-05 16:25:06
+categories: Centos
 key: 20170605
 tags:
 - centos

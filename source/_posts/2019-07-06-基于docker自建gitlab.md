@@ -3,6 +3,7 @@ author: zyqzyq
 date: 2019-07-06 10:10:32+00:00
 layout: post
 title: 基于docker自建gitlab
+categories: docker
 key: 20190706
 tags:
 - gitlab

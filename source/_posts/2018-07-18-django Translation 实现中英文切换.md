@@ -3,6 +3,7 @@ author: zyqzyq
 date: 2018-07-18 10:16:32+00:00
 layout: post
 title: django Translation 实现中英文切换
+categories: django
 key: 20180718
 tags:
 - django

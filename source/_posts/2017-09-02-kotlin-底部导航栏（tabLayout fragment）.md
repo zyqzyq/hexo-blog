@@ -1,7 +1,8 @@
 ---
 layout: post
 title: kotlin 底部导航栏（tabLayout + fragment）
-date: 2017-09-02 16:25:06 -0700
+date: 2017-09-02 16:25:06
+categories: kotlin
 key: 20170902
 tags:
 - kotlin
