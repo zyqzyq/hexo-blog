@@ -77,8 +77,8 @@ fancybox: false
 
 # Search
 search:
-  insight: false # you need to install `hexo-generator-json-content` before using Insight Search
-  baidu: true # you need to disable other search engines to use Baidu search
+  insight: true # you need to install `hexo-generator-json-content` before using Insight Search
+  baidu: false # you need to disable other search engines to use Baidu search
 
 # Donate
 donate:
@@ -126,8 +126,8 @@ comment:
     ClientID:  #必须. GitHub Application Client ID.
     ClientSecret:  #必须. GitHub Application Client Secret.
   valine: # Valine. https://valine.js.org
-    appid:  # your leancloud application appid
-    appkey:  # your leancloud application appkey
+    appid:  ss5B1VHAeeSwqnQmi8h7E6ip-gzGzoHsz # your leancloud application appid
+    appkey: ljnA88bOYWBjm8WLlcao8Gcc # your leancloud application appkey
     notify: false # mail notifier , https://github.com/xCss/Valine/wiki
     verify: false # Verification code
     placeholder: Just go go # comment box placeholder
