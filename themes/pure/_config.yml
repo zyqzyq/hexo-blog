@@ -107,10 +107,10 @@ github:
 # Gitment
 # Introduction: https://imsun.net/posts/gitment-introduction/
 comment:
-  type: valine  # 启用哪种评论系统
+  type:  # 启用哪种评论系统
   disqus:  # enter disqus shortname here
   youyan: 
-    uid: 1783844 # enter youyan uid 
+    uid: # enter youyan uid
   livere:
     uid: # enter youyan uid 
   gitment:
@@ -126,8 +126,8 @@ comment:
     ClientID:  #必须. GitHub Application Client ID.
     ClientSecret:  #必须. GitHub Application Client Secret.
   valine: # Valine. https://valine.js.org
-    appid:  ss5B1VHAeeSwqnQmi8h7E6ip-gzGzoHsz # your leancloud application appid
-    appkey: ljnA88bOYWBjm8WLlcao8Gcc # your leancloud application appkey
+    appid: # your leancloud application appid
+    appkey: # your leancloud application appkey
     notify: false # mail notifier , https://github.com/xCss/Valine/wiki
     verify: false # Verification code
     placeholder: Just go go # comment box placeholder
