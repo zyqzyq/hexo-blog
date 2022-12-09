@@ -8,6 +8,28 @@
     "deploy": "hexo deploy",
     "server": "hexo server"
   },
+  "yuqueConfig": {
+    "postPath": "source/_posts",
+    "cachePath": "yuque.json",
+    "mdNameFormat": "title",
+    "adapter": "hexo",
+    "concurrency": 5,
+    "baseUrl": "https://www.yuque.com/api/v2",
+    "login": "zyqzyq08",
+    "repo": "blog",
+    "onlyPublished": false,
+    "onlyPublic": false,
+	"lastGeneratePath": "lastGeneratePath.log",
+    "imgCdn": {
+      "enabled": false,
+      "concurrency": 0,
+      "imageBed": "qiniu",
+      "host": "",
+      "bucket": "",
+      "region": "",
+      "prefixKey": ""
+    }
+  },
   "hexo": {
     "version": "5.4.0"
   },
@@ -23,6 +45,7 @@
     "hexo-renderer-stylus": "^2.0.0",
     "hexo-server": "^2.0.0",
     "hexo-theme-landscape": "^0.0.3",
-    "hexo-wordcount": "^6.0.1"
+    "hexo-wordcount": "^6.0.1",
+	"yuque-hexo": "^1.9.1"
   }
 }
