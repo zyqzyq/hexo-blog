@@ -27,10 +27,8 @@ jobs:
 
     - name: sync yueque
       run: |
-        npm install hexo-cli -g
         npm install yuque-hexo -g
-        npm install
-        YUQUE_TOKEN=${{secrets.YUQUE_TOKEN}} & yuque-hexo sync
+        YUQUE_TOKEN=${{secrets.YUQUE_TOKEN}} yuque-hexo sync
 
     - name: Commit & push changes
       run: |
