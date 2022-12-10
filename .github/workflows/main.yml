@@ -6,21 +6,37 @@ on:
   workflow_dispatch:
 
 jobs:
-  # This workflow contains a single job called "update"
-  update:
+  blog-cicd:
+    name: sync Hexo blog 
     runs-on: ubuntu-latest
-
+    env:
+      TZ: Asia/Shanghai
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v2
+    - name: Checkout codes
+      uses: actions/checkout@v2
 
-      - name: sync yuque
-        run: |
-          YUQUE_TOKEN = ${{secrets.YUQUE_TOKEN}} & yuque-hexo sync
+    - name: Setup node
+      uses: actions/setup-node@v1
+      with:
+        node-version: '12.x'
+    - name: Cache node modules
+      uses: actions/cache@v1
+      with:
+        path: node_modules
+        key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
 
-      - name: Commit & push changes
-        run: |
-          git config --global user.name "GitHub Action"
-          git config --global user.email "action@github.com"
-          git commit -am "Update post"
-          git push
+    - name: sync yueque
+      env:
+        YUQUE_TOKEN: ${{YUQUE_TOKEN}}
+      run: |
+        npm install hexo-cli -g
+        npm install yuque-hexo -g
+        npm install
+        yuque-hexo sync
+
+    - name: Commit & push changes
+      run: |
+        git config --global user.name "GitHub Action"
+        git config --global user.email "action@github.com"
+        git commit -am "GitHub Actions Auto Sync Post at $(date +'%Y-%m-%d %H:%M:%S')"
+        git push
