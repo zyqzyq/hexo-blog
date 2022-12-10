@@ -26,13 +26,11 @@ jobs:
         key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
 
     - name: sync yueque
-      env:
-        YUQUE_TOKEN: ${{secrets.YUQUE_TOKEN}}
       run: |
         npm install hexo-cli -g
         npm install yuque-hexo -g
         npm install
-        yuque-hexo sync
+        YUQUE_TOKEN=${{secrets.YUQUE_TOKEN}} & yuque-hexo sync
 
     - name: Commit & push changes
       run: |
