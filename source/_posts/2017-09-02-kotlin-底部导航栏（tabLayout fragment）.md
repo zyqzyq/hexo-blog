@@ -1,39 +1,21 @@
 ---
-title: 2017-09-02-kotlin-底部导航栏（tabLayout fragment）
-urlname: 5bb9963ccfb57722e4e1c34a20ceadf7
-date: '2022-12-09 20:02:17 +0800'
-tags: []
-categories: []
----
-
-<hr />
-<p>layout: post
-
+layout: post
 title: kotlin 底部导航栏（tabLayout + fragment）
-
 date: 2017-09-02 16:25:06
-
 categories: kotlin
-
 key: 20170902
+tags:
+- kotlin
 
-tags:</p>
+---
+##准备工作
+  在build.grale中添加
+    ```compile "com.android.support:design:$support_version"```
 
-<ul>
-<li>kotlin</li>
-</ul>
-<hr />
-<p>##准备工作
-
-在 build.grale 中添加
-
-<code>compile "com.android.support:design:$support_version"</code></p>
-
-<p>#1.编辑main_activity.xml
-
-确定主页面布局 FrameLayout +TabLayout</p>
-
-<pre><code><?xml version="1.0" encoding="utf-8"?>
+#1.编辑main_activity.xml
+  确定主页面布局FrameLayout +TabLayout
+```
+<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
@@ -63,12 +45,11 @@ tags:</p>
             app:tabTextColor="@android:color/darker_gray">
     </android.support.design.widget.TabLayout>
 </LinearLayout>
-</code></pre>
-<p>#2.创建tabView.xml
-
-因为默认的 tablayout 添加 icon 显示后图片显得较小（选择了 setCustomView 方法，需要自定义 view）</p>
-
-<pre><code><?xml version="1.0" encoding="utf-8"?>
+```
+#2.创建tabView.xml
+  因为默认的tablayout添加icon显示后图片显得较小（选择了setCustomView方法，需要自定义view）
+```
+<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:orientation="vertical"
               android:gravity="center"
@@ -88,22 +69,22 @@ tags:</p>
             android:textColor="@android:color/darker_gray"/>
 
 </LinearLayout>
-</code></pre>
-<p>#3.编辑MainActivity.kt
-
-信息存在了 object 中,方便修改</p>
-
-<pre><code>object MainData {
-   val mainFragmentList = arrayOf(HomeFragment(), FindFragment(), FollowFragment(), MineFragment())
-   val mainTabRes = listOf(R.mipmap.ic_tab_home,R.mipmap.ic_tab_find,
-           R.mipmap.ic_tab_follow,R.mipmap.ic_tab_mine)
-   val mainTabResPressed = listOf(R.mipmap.ic_tab_home_selected,R.mipmap.ic_tab_find_selected,
-           R.mipmap.ic_tab_follow_selected,R.mipmap.ic_tab_mine_selected)
-   val mainTabStr = listOf("首页","发现","关注","我的")
+```
+#3.编辑MainActivity.kt
+  信息存在了object中,方便修改
+ ```
+object MainData {
+    val mainFragmentList = arrayOf(HomeFragment(), FindFragment(), FollowFragment(), MineFragment())
+    val mainTabRes = listOf(R.mipmap.ic_tab_home,R.mipmap.ic_tab_find,
+            R.mipmap.ic_tab_follow,R.mipmap.ic_tab_mine)
+    val mainTabResPressed = listOf(R.mipmap.ic_tab_home_selected,R.mipmap.ic_tab_find_selected,
+            R.mipmap.ic_tab_follow_selected,R.mipmap.ic_tab_mine_selected)
+    val mainTabStr = listOf("首页","发现","关注","我的")
 }
-</code></pre>
-<p>默认添加了4个tab，并设置Tab 选中之后，改变各个Tab的状态</p>
-<pre><code>override fun onCreate(savedInstanceState: Bundle?) {
+```
+默认添加了4个tab，并设置Tab 选中之后，改变各个Tab的状态
+```
+override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         initView()
@@ -147,16 +128,12 @@ tags:</p>
         view.tab_content_text.text = MainData.mainTabStr[position]
         return view
     }
-
-</code></pre>
-
-<p>#添加fragment
-
-新建 home_framgment.kt
-
-代码如下</p>
-
-<pre><code>class HomeFragment: Fragment(){
+```
+#添加fragment
+新建home_framgment.kt
+代码如下
+```
+class HomeFragment: Fragment(){
     override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?, savedInstanceState: Bundle?): View {
         return inflater!!.inflate(R.layout.fragment_home,container,false)
     }
@@ -165,9 +142,10 @@ tags:</p>
         super.onActivityCreated(savedInstanceState)
     }
 }
-</code></pre>
-<p>新建fragment_home.xml</p>
-<pre data-syntax="<?xml"><code class="lang-<?xml hljs raw"><LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+```
+新建fragment_home.xml
+```<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:orientation="vertical"
               android:layout_width="match_parent"
               android:layout_height="match_parent">
@@ -176,19 +154,21 @@ tags:</p>
             android:text="home fragment"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" android:id="@+id/textView"/>
-
 </LinearLayout>
-</code></pre>
-<p>重复上述操作新建4个fragment。</p>
-<p>#5.在MainActivity.kt添加fragment的更新
+```
+重复上述操作新建4个fragment。
 
-添加函数 onTabItemSelected</p>
-
-<pre><code>fun onTabItemSelected(position: Int){
+#5.在MainActivity.kt添加fragment的更新
+添加函数onTabItemSelected
+```
+fun onTabItemSelected(position: Int){
         val transaction = fragmentManager.beginTransaction()
         transaction.replace(R.id.main_container, MainData.mainFragmentList[position]).commit()
     }
-</code></pre>
-<p>并在onTabSelected中调用。</p>
-<p>#6.最终效果图如下</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/7646499-d081b53f35b04173.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt class="align-none" /></p>
+```
+并在onTabSelected中调用。
+
+#6.最终效果图如下
+
+
+![](http://upload-images.jianshu.io/upload_images/7646499-d081b53f35b04173.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
