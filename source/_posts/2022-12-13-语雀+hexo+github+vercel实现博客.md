@@ -6,9 +6,7 @@ layout: post
 categories:
   - blog
   - hexo
-tags:
-  - blog
-  - hexo
+tags: blog
 ---
 
 # 准备工作
