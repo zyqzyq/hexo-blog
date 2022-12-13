@@ -2,7 +2,7 @@
   {
     "id": 109284058,
     "slug": "sf325xe8rottnalb",
-    "title": "2022-12-13-语雀 hexo github vercel实现博客",
+    "title": "2022-12-13-语雀自动同步博客",
     "book_id": 35434856,
     "book": {
       "id": 35434856,
@@ -16,8 +16,8 @@
       "items_count": 19,
       "likes_count": 0,
       "watches_count": 0,
-      "content_updated_at": "2022-12-13T15:20:03.611Z",
-      "updated_at": "2022-12-13T15:20:04.000Z",
+      "content_updated_at": "2022-12-13T15:25:21.854Z",
+      "updated_at": "2022-12-13T15:25:22.000Z",
       "created_at": "2022-12-08T01:42:22.000Z",
       "namespace": "zyqzyq08/blog",
       "user": {
@@ -68,8 +68,8 @@
     "content_updated_at": "2022-12-13T15:10:08.000Z",
     "deleted_at": null,
     "created_at": "2022-12-13T14:18:13.000Z",
-    "updated_at": "2022-12-13T15:20:04.000Z",
-    "published_at": "2022-12-13T15:20:04.000Z",
+    "updated_at": "2022-12-13T15:25:22.000Z",
+    "published_at": "2022-12-13T15:25:22.000Z",
     "first_published_at": "2022-12-13T14:18:21.726Z",
     "word_count": 682,
     "cover": null,
