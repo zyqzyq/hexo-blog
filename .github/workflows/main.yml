@@ -35,5 +35,6 @@ jobs:
       run: |
         git config --global user.name "GitHub Action"
         git config --global user.email "action@github.com"
-        git commit -am "GitHub Actions Auto Sync Post at $(date +'%Y-%m-%d %H:%M:%S')"
+        git add .
+        git commit -m "GitHub Actions Auto Sync Post at $(date +'%Y-%m-%d %H:%M:%S')"
         git push
