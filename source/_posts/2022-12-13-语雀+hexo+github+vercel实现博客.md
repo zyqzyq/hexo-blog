@@ -1,19 +1,14 @@
 ---
-title: 2022-12-13-语雀+hexo+github+vercel实现博客
-urlname: sf325xe8rottnalb
-date: '2022-12-13 22:18:13 +0800'
-tags: []
-categories: []
----
-
----
-
-layout: post
 title: 语雀+hexo+github+vercel实现博客
-date: 2022-12-13 22:25:06
-categories: [blog,hexo]
-tags:[blog,hexo]
-
+urlname: sf325xe8rottnalb
+date: '2022-12-13 22:25:06 +0800'
+layout: post
+categories:
+  - blog
+  - hexo
+tags:
+  - blog
+  - hexo
 ---
 
 # 准备工作
