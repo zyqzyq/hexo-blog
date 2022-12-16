@@ -19,7 +19,7 @@
     "repo": "blog",
     "onlyPublished": false,
     "onlyPublic": false,
-	"lastGeneratePath": "lastGeneratePath.log",
+    "lastGeneratePath": "lastGeneratePath.log",
     "imgCdn": {
       "enabled": false,
       "concurrency": 0,
@@ -46,6 +46,6 @@
     "hexo-server": "^2.0.0",
     "hexo-theme-landscape": "^0.0.3",
     "hexo-wordcount": "^6.0.1",
-	"yuque-hexo": "^1.9.1"
+    "yuque-hexo": "^1.9.1"
   }
 }
