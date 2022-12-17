@@ -397,7 +397,7 @@
   {
     "id": 108945046,
     "slug": "c338b2d897ca073247963da6d032b6b1",
-    "title": "2018-06-26-django+celery+supervisor 定时任务+部署",
+    "title": "2018-06-26-django celery supervisor 定时任务 部署",
     "book_id": 35434856,
     "book": {
       "id": 35434856,
@@ -411,8 +411,8 @@
       "items_count": 19,
       "likes_count": 0,
       "watches_count": 0,
-      "content_updated_at": "2022-12-17T10:33:20.470Z",
-      "updated_at": "2022-12-17T10:33:20.000Z",
+      "content_updated_at": "2022-12-17T11:03:43.130Z",
+      "updated_at": "2022-12-17T11:03:43.000Z",
       "created_at": "2022-12-08T01:42:22.000Z",
       "namespace": "zyqzyq08/blog",
       "user": {
@@ -463,8 +463,8 @@
     "content_updated_at": "2022-12-11T13:03:47.000Z",
     "deleted_at": null,
     "created_at": "2022-12-09T12:02:29.000Z",
-    "updated_at": "2022-12-17T10:33:21.000Z",
-    "published_at": "2022-12-17T10:33:20.000Z",
+    "updated_at": "2022-12-17T11:03:43.000Z",
+    "published_at": "2022-12-17T11:03:43.000Z",
     "first_published_at": "2022-12-09T12:02:28.734Z",
     "word_count": 600,
     "cover": null,
